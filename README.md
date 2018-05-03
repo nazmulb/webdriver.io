@@ -23,6 +23,7 @@ npm install webdriverio --save-dev
 
 Now you need to define a configuration file where all information about your tests, capabilities and settings are set. A question interface pops up. It will help to create the config easy and fast. If you are not sure what to answer follow this answers:
 
+```
 Q: Where do you want to execute your tests?
 A: On my local machine
 
@@ -55,6 +56,7 @@ A: ./errorShots/ (just press enter)
 
 Q: What is the base url?
 A: http://localhost (just press enter)
+```
 
 That’s it! The configurator now installs all required packages for you and creates a config file with the name `wdio.conf.js`. 
 
