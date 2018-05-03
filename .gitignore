@@ -1,0 +1,17 @@
+# Logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# build output
+*.xunit.*.xml
+
+# App files
+*.apk
+*.ipa
+*.app
+.idea/misc.xml
+.idea/modules.xml
+.idea/

@@ -1,0 +1,23 @@
+{
+  "name": "e2e-test-automation",
+  "version": "1.0.0",
+  "description": "WebdriverIO e2e Test Automation Project",
+  "author": "Nazmul Basher <nazmul.basher@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nazmulb/webdriver.io.git"
+  },
+  "keywords": ["e2e", "test", "automation", "webdriver", "webdriverio"],
+  "scripts": {
+    "test": "./node_modules/.bin/wdio wdio.conf.js"
+  },
+  "dependencies": {
+    "chai": "^4.1.2"
+  },
+  "devDependencies": {
+    "wdio-mocha-framework": "^0.5.13",
+    "wdio-selenium-standalone-service": "0.0.10",
+    "wdio-spec-reporter": "^0.1.4",
+    "webdriverio": "^4.12.0"
+  }
+}
