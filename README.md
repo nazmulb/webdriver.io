@@ -5,7 +5,7 @@ WebdriverIO is an open source e2e test automation utility for nodejs.
 
 ## Installation:
 
-Please install <a href="http://nodejs.org/"Node.js</a> and <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Development Kit (JDK)</a> (Selenium Server is a Java application).
+Please install <a href="http://nodejs.org/">Node.js</a> and <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Development Kit (JDK)</a> (Selenium Server is a Java application).
 
 ### Step 1 - Create empty `package.json` file:
 
