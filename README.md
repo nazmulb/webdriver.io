@@ -62,7 +62,7 @@ That’s it! The configurator now installs all required packages for you and cre
 ./node_modules/.bin/wdio config
 ```
 
-<img alt="wdio configuration" src="https://raw.githubusercontent.com/nazmulb/webdriver.io/master/images/configuration.png" width="850px" />
+<img alt="wdio configuration" src="https://raw.githubusercontent.com/nazmulb/webdriver.io/master/images/configuration.png" width="900px" />
 
 
 ### Step 4 - Install Chai assertion library:
