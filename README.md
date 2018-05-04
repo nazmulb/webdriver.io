@@ -21,6 +21,10 @@ npm install webdriverio --save-dev
 
 ### Step 3 - generate WebdriverIO config file:
 
+```js
+./node_modules/.bin/wdio config
+```
+
 Now you need to define a configuration file where all information about your tests, capabilities and settings are set. A question interface pops up. It will help to create the config easy and fast. If you are not sure what to answer follow this answers:
 
 ```
@@ -37,19 +41,19 @@ Q: Where are your test specs located?
 A: ./test/specs/*/.js (just press enter)
 
 Q: Which reporter do you want to use?
-A: spec (use up/down arrow to navigate and press space bar to select and enter)
+A: spec (use up/down arrow to navigate and press <space> bar to select and enter)
 
 Q: Shall I install the reporter library for you?
 A: Yes (just press enter)
 
 Q: Do you want to add a service to your test setup?
-A: selenium-standalone (use up/down arrow to navigate and press space bar to select and enter)
+A: selenium-standalone (use up/down arrow to navigate and press <space> bar to select and enter)
 
 Q: Shall I install the service for you?
 A: Yes (just press enter)
 
 Q: Level of logging verbosity:
-A: verbose (use up/down arrow to navigate and press space bar to select and enter)
+A: verbose (use up/down arrow to navigate and enter)
 
 Q: In which directory should screenshots gets saved if a command fails?
 A: ./errorShots/ (just press enter)
@@ -60,12 +64,7 @@ A: http://localhost (just press enter)
 
 That’s it! The configurator now installs all required packages for you and creates a config file with the name `wdio.conf.js`. 
 
-```js
-./node_modules/.bin/wdio config
-```
-
 <img alt="wdio configuration" src="https://raw.githubusercontent.com/nazmulb/webdriver.io/master/images/configuration.png" width="900px" />
-
 
 ### Step 4 - Install Chai assertion library:
 
@@ -84,7 +83,6 @@ npm install chai --save
 ### Step 6 - Update configuration in `wdio.conf.js` file:
 
 ```js
-
 // use chrome browser
 capabilities: [{
     browserName: 'chrome'
