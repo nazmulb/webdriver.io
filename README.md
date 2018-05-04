@@ -130,3 +130,10 @@ npm test
 ```
 
 Done :)
+
+### Why we had to choose a different framework, library and service?
+
+- `mocha`: We used Mocha as a testrunner for WebdriverIO. Now within your spec files or step definition you can access the webdriver instance using the global variable `browser`. You don’t need to initiate or end the Selenium session. This is taken care of by the wdio testrunner.
+- `chai`: Mocha needs an additional assertion library to be installed like Chai to have more expressive tests.
+- `spec`: A WebdriverIO plugin to report in spec style.
+- `selenium-standalone`: This service helps you to run Selenium seamlessly when running tests with the WDIO testrunner. It automatically sets up the standalone server and all required drivers for you. By default, Google Chrome, Firefox and PhantomJS are available when installed on the host system.
