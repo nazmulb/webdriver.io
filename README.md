@@ -5,13 +5,16 @@ WebdriverIO is an open source e2e (End-to-End) test automation utility for nodej
 
 It basically sends requests to a Selenium server via the <a href="https://www.w3.org/TR/webdriver/">WebDriver Protocol</a> and handles its response. These requests are wrapped in useful commands and can be used to test several aspects of your site in an automated way.
 
-## Overview of WebDriver
-WebDriver is a general purpose library for automating web browsers. It was started as part of the Selenium project, which is a very popular and comprehensive set of tools for browser automation, initially written for Java but now with support for most programming languages.
+## Architecture
 
-## Theory of Operation
-WebdriverIO works by communicating over a restful HTTP api with a WebDriver server (typically the Selenium server). The restful API protocol is defined by the W3C WebDriver API. See below for an example workflow for browser initialization.
+All software runs on your local computer
 
-<img src="http://nightwatchjs.org/img/operation.png" alt="Theory of Operation">
+- Node runs Mocha framework and runner of test script.
+- Chai (should) is the assertion library.
+- Web Driver IO communicates with Selenium Server using JSON Wire Protocol.
+- Selenium Server invokes local browser using a driver to test the web application.
+
+<img alt="Selenium Standalone Diagram" src="https://raw.githubusercontent.com/nazmulb/webdriver.io/master/images/selenium-standalone-diagram.png" width="900px" />
 
 ## Installation:
 
