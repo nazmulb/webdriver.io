@@ -137,3 +137,85 @@ Done :)
 - `chai`: Mocha needs an additional assertion library to be installed like Chai to have more expressive tests.
 - `spec`: A WebdriverIO plugin to report in spec style.
 - `selenium-standalone`: This service helps you to run Selenium seamlessly when running tests with the WDIO testrunner. It automatically sets up the standalone server and all required drivers for you. By default, Google Chrome, Firefox and PhantomJS are available when installed on the host system.
+
+## Selectors:
+
+WebdriverIO supports the following selector types:
+
+### CSS Query Selector:
+
+```js
+browser.click('h2.subheading a');
+```
+
+### Link Text:
+
+To get an anchor element with a specific text in it, query the text starting with an equal (=) sign. For example:
+
+```html
+<a href="http://webdriver.io">WebdriverIO</a>
+```
+
+```js
+console.log(browser.getText('=WebdriverIO')); // outputs: "WebdriverIO"
+console.log(browser.getAttribute('=WebdriverIO', 'href')); // outputs: "http://webdriver.io"
+```
+
+### Partial Link Text:
+
+To find a anchor element whose visible text partially matches your search value, query it by using *= in front of the query string (e.g. `*=driver`)
+
+```html
+<a href="http://webdriver.io">WebdriverIO</a>
+```
+
+```js
+console.log(browser.getText('*=driver')); // outputs: "WebdriverIO"
+```
+
+### Element with certain text:
+
+The same technique can be applied to elements as well, e.g. query a level 1 heading with the text “Welcome to my Page”:
+
+```html
+<h1 alt="welcome-to-my-page">Welcome to my Page</h1>
+```
+
+```js
+console.log(browser.getText('h1=Welcome to my Page')); // outputs: "Welcome to my Page"
+console.log(browser.getTagName('h1=Welcome to my Page')); // outputs: "h1"
+```
+
+or using query partial text
+
+```js
+console.log(browser.getText('h1*=Welcome')); // outputs: "Welcome to my Page"
+console.log(browser.getText('h1[alt*="welcome"]')); // outputs: "Welcome to my Page"
+```
+
+The same works for ids and class names:
+
+```html
+<i class="someElem" id="elem">WebdriverIO is the best</i>
+```
+
+```js
+console.log(browser.getText('.someElem=WebdriverIO is the best')); // outputs: "WebdriverIO is the best"
+console.log(browser.getText('#elem=WebdriverIO is the best')); // outputs: "WebdriverIO is the best"
+console.log(browser.getText('.someElem*=WebdriverIO')); // outputs: "WebdriverIO is the best"
+console.log(browser.getText('#elem*=WebdriverIO')); // outputs: "WebdriverIO is the best"
+```
+
+### Tag Name:
+
+To query an element with a specific tag name use `<tag>` or `<tag />`
+
+### Name Attribute:
+
+For querying elements with a specific name attribute you can either use a normal CSS3 selector or the provided name strategy from the JsonWireProtocol by passing something like `[name="some-name"]` as selector parameter
+
+### xPath:
+
+It is also possible to query elements via a specific xPath. The selector has to have a format like for example `//BODY/DIV[6]/DIV[1]/SPAN[1]`
+
+In near future WebdriverIO will cover more selector features like form selector (e.g. `:password`,`:file` etc) or positional selectors like `:first` or `:nth`.
