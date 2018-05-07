@@ -1,7 +1,17 @@
 # WebdriverIO
-WebdriverIO is an open source e2e test automation utility for nodejs.
 
+## What is WebdriverIO?
+WebdriverIO is an open source e2e (End-to-End) test automation utility for nodejs. It lets you control a browser or a mobile application with just a few lines of code. It makes it possible to write super easy selenium tests with Javascript in your favorite BDD or TDD test framework.
 
+It basically sends requests to a Selenium server via the <a href="https://www.w3.org/TR/webdriver/">WebDriver Protocol</a> and handles its response. These requests are wrapped in useful commands and can be used to test several aspects of your site in an automated way.
+
+## Overview of WebDriver
+WebDriver is a general purpose library for automating web browsers. It was started as part of the Selenium project, which is a very popular and comprehensive set of tools for browser automation, initially written for Java but now with support for most programming languages.
+
+## Theory of Operation
+WebdriverIO works by communicating over a restful HTTP api with a WebDriver server (typically the Selenium server). The restful API protocol is defined by the W3C WebDriver API. See below for an example workflow for browser initialization.
+
+<img src="http://nightwatchjs.org/img/operation.png" alt="Theory of Operation">
 
 ## Installation:
 
@@ -163,7 +173,7 @@ console.log(browser.getAttribute('=WebdriverIO', 'href')); // outputs: "http://w
 
 ### Partial Link Text:
 
-To find a anchor element whose visible text partially matches your search value, query it by using *= in front of the query string (e.g. `*=driver`)
+To find a anchor element whose visible text partially matches your search value, query it by using `*=` in front of the query string (e.g. `*=driver`)
 
 ```html
 <a href="http://webdriver.io">WebdriverIO</a>
