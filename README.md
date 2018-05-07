@@ -5,7 +5,10 @@ WebdriverIO is an open source e2e (End-to-End) test automation utility for nodej
 
 It basically sends requests to a Selenium server via the <a href="https://www.w3.org/TR/webdriver/">WebDriver Protocol</a> and handles its response. These requests are wrapped in useful commands and can be used to test several aspects of your site in an automated way.
 
-## Architecture
+## Overview of WebDriver:
+WebDriver is a general purpose library for automating web browsers. It was started as part of the Selenium project, which is a very popular and comprehensive set of tools for browser automation, initially written for Java but now with support for most programming languages.
+
+## Architecture:
 
 All software runs on your local computer
 
